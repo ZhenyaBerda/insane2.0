@@ -298,7 +298,7 @@ const dropdownLists = document.querySelector('.dropdown-lists'),
 const init = () => {
     dropdownLists.style.display = 'none';
     dropdownCol.forEach(item => item.remove());
-    // closeButton.textContent = 'X';
+
 };
 
 
@@ -545,4 +545,10 @@ closeButton.addEventListener('click', () => {
     dropdownAutocomplete.style.display = 'none';
     dropdownSelect.style.display = 'none';
     closeButton.style.display = 'none';
-})
+});
+
+button.addEventListener('click', (event) => {
+    if (input.value.length === 0) {
+        event.preventDefault();
+    }
+});
